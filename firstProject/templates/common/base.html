@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %} Home {% endblock title %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="{% url 'about' %}">About</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'blog' %}">Blogs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/deep/">Deep Learning</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/data/">Data Analysis</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Machine Learning
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="/ml/machine/">Machhine Learning</a></li>
+                      <li><a class="dropdown-item" href="/ml/dtree/">Decision Tree</a></li>
+                      <li><a class="dropdown-item" href="/ml/knn/">K Nearest Algorithm</a></li>
+                      <li><a class="dropdown-item" href="/ml/random/">Random Forest</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+
+          <h1>Welcome to {% block welcome %} {% endblock welcome%} </h1>
+
+
+
+    
+          <footer class="footer-section">
+            <div class="footer-top">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="widget company-intro-widget">
+                      <a href="index.html" class="site-logo"><img src="https://i.ibb.co/vLDyPtM/ak-logo-yellow.png" alt="logo"></a>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+                      <ul class="company-footer-contact-list">
+                        <li><i class="fas fa-phone"></i>0123456789</li>
+                        <li><i class="fas fa-clock"></i>Mon - Sat 8.00 - 18.00</li>
+                      </ul>
+                    </div>
+                  </div><!-- widget end -->
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="widget course-links-widget">
+                      <h5 class="widget-title">Popular Courses</h5>
+                      <ul class="courses-link-list">
+                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i>Academic English</a></li>
+                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i>Web Technology</a></li>
+                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i>PC Systems</a></li>
+                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i>Ui Web Design</a></li>
+                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i>Web Development</a></li>
+                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i>Apps Development</a></li>
+                      </ul>
+                    </div>
+                  </div><!-- widget end -->
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="widget latest-news-widget">
+                      <h5 class="widget-title">lastest news</h5>
+                      <ul class="small-post-list">
+                        <li>
+                          <div class="small-post-item">
+                            <a href="#" class="post-date">July 18, 2018</a>
+                            <h6 class="small-post-title"><a href="#">Lorem Ipsum is simply dummy text of the printing.</a></h6>
+                          </div>
+                        </li><!-- small-post-item end -->
+                        <li>
+                          <div class="small-post-item">
+                            <a href="#" class="post-date">July 28, 2018</a>
+                            <h6 class="small-post-title"><a href="#">Lorem Ipsum is simply dummy text of the printing</a></h6>
+                          </div>
+                        </li><!-- small-post-item end -->
+                      </ul>
+                    </div>
+                  </div><!-- widget end -->
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="widget newsletter-widget">
+                      <h5 class="widget-title">Newsletter</h5>
+                      <div class="footer-newsletter">
+                        <p>Sign Up to Our Newsletter to Get Latest Updates & Services</p>
+                        <form class="news-letter-form">
+                          <input type="email" name="news-email" id="news-email" placeholder="Your email address">
+                          <input type="submit" value="Send">
+                        </form>
+                      </div>
+                    </div>
+                  </div><!-- widget end -->
+                </div>
+              </div> 
+            </div>
+            <div class="footer-bottom">
+              <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 text-sm-left text-center">
+                      <span class="copy-right-text">© 2019 <a href="https://codepen.io/anupkumar92">Anup</a> All Rights Reserved.</span>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <ul class="terms-privacy d-flex justify-content-sm-end justify-content-center">
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                      </ul>
+                    </div>
+                </div>
+              </div>
+            </div><!-- footer-bottom end -->
+          </footer>
+        
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+
+        </script>
+
+    </body>
+</html>

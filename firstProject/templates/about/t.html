@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Teacher</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/t.css' %}">
+    </head>
+    <body>
+       
+        {% if thr %}
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Tid</th>
+                <th>Tname</th>
+                <th>Temail</th>
+            </tr>
+            {% for th in thr%}
+            <tr>
+                <th>{{th.id}}</th>
+                <th>{{th.tid}}</th>
+                <th>{{th.tname}}</th>
+                <th>{{th.temail}}</th>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <h2>Empty DB</h2>
+        {% endif %}
+
+
+        <script src="" async defer></script>
+    </body>
+</html>
