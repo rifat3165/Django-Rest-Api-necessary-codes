@@ -27,10 +27,16 @@ urlpatterns = [
     path('blog/', include('blog1.urls')),
     path('data/', include('Data_Analysis.urls')),
     path('about/', include('About_Us.urls')),
-    # path('aiinfo/', views.aiquest_info),
-    # path('aiinfo/<int:pk>', views.aiquest_ins),
-    path('aicreate/', views.aiquest_create, name='aicreate'),
-    path('aicreate/<int:pk>', views.aiquest_create, name='aicreate'),
-
+    # path('aiinfo/', views.aiquest_info),              #show info in site(comment)
+    # path('aiinfo/<int:pk>', views.aiquest_ins),        #show info in site by id(comment)
+    # path('aicreate/', views.aiquest_create, name='aicreate'),         #function based view url(comment)
+    # path('aicreate/<int:pk>', views.aiquest_create, name='aicreate'),     #function based view url(comment)
+    # path('aicreate/', views.AiquestCreate.as_view(), name='aicreate'),         #class based view url(comment)
+    # path('aicreate/<int:pk>', views.AiquestCreate.as_view(), name='aicreate'),       #class based view url(comment
+    path('ailist/', views.Aiquestlist.as_view(), name='ailist'),
+    path('aicreate-mdl/', views.AiquestCreateModel.as_view(), name='aicreate-mdl'),
+    path('airetrieve/<int:pk>/', views.AiquestRetrieve.as_view()),
+    path('aiupdate/<int:pk>/', views.AiquestUpdate.as_view()),
+    path('aidestroy/<int:pk>/', views.AiquestDelete.as_view()),
 
 ]
